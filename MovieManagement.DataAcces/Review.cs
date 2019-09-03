@@ -28,3 +28,4 @@ namespace MovieManagement.DataAcces
         public virtual ICollection<Movie> Movies { get; set; }
     }
 }
+  
