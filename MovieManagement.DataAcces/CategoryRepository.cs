@@ -23,6 +23,14 @@ namespace MovieManagement.DataAcces
 
         }
 
+        public Category GetCategorybyName(string name)
+        {
+            //I called Tolower methos which transforms the string into lowercase, because we want strings like Drama, dRama, dRaMa to Match
+            var lowercaseName = name.ToLower();
+            var category = DbContext.Categories.FirstOrDefault(a => a.Name.ToLower().Contains(lowercaseName));
+            return category;
+        }
+
         //post method add category
         public void AddCategory(Category newCategory)
         {

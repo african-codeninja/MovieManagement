@@ -31,7 +31,7 @@ namespace MovieManagement.DataAcces
         }
 
         //delete category method
-        public void DeleteMoivie(Guid movieId)
+        public void DeleteMovie(Guid movieId)
         {
             var movie = DbContext.Movies.FirstOrDefault(a => a.Id == movieId);
 
