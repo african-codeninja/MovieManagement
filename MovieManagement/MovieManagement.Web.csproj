@@ -143,7 +143,10 @@
     <Compile Include="Areas\API\Controllers\CategoryController.cs" />
     <Compile Include="Areas\API\Controllers\MovieController.cs" />
     <Compile Include="Areas\API\Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,12 +158,18 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\API\Views\web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -172,6 +181,29 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Theme\Css\bootstrap.css" />
+    <Content Include="Theme\Css\bootstrap.min.css" />
+    <Content Include="Theme\Css\font-awesome.css" />
+    <Content Include="Theme\Css\font-awesome.min.css" />
+    <Content Include="Theme\Css\metisMenu.css" />
+    <Content Include="Theme\Css\metisMenu.min.css" />
+    <Content Include="Theme\Css\morris.css" />
+    <Content Include="Theme\Css\sb-admin-2.css" />
+    <Content Include="Theme\Css\sb-admin-2.min.css" />
+    <Content Include="Theme\fonts\fontawesome-webfont.svg" />
+    <Content Include="Theme\js\bootstrap.js" />
+    <Content Include="Theme\js\bootstrap.min.js" />
+    <Content Include="Theme\js\jquery.js" />
+    <Content Include="Theme\js\jquery.min.js" />
+    <Content Include="Theme\js\metisMenu.js" />
+    <Content Include="Theme\js\metisMenu.min.js" />
+    <Content Include="Theme\js\morris-data.js" />
+    <Content Include="Theme\js\morris.js" />
+    <Content Include="Theme\js\morris.min.js" />
+    <Content Include="Theme\js\raphael.js" />
+    <Content Include="Theme\js\raphael.min.js" />
+    <Content Include="Theme\js\sb-admin-2.js" />
+    <Content Include="Theme\js\sb-admin-2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -186,11 +218,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Theme\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme\fonts\FontAwesome.otf" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\API\Views\Shared\" />
+    <Folder Include="Views\Categories\" />
+    <Folder Include="Views\Reviews\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

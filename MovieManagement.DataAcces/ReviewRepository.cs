@@ -8,10 +8,12 @@ namespace MovieManagement.DataAcces
 {
     public class ReviewRepository : BaseRepository
     {
+        //get method that return a list view of all reviews
         public List<Review> searchReviews()
         {
             return DbContext.Reviews.ToList();
         }
+
         //get method
         public Review GetReview(Guid reviewId)
         {

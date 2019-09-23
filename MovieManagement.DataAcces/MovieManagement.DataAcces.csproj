@@ -57,7 +57,6 @@
       <DependentUpon>MovieDB.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryRepository.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Movie.cs">
       <DependentUpon>MovieDB.tt</DependentUpon>
     </Compile>

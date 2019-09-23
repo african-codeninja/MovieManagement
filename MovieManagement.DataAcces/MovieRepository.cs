@@ -10,17 +10,13 @@ namespace MovieManagement.DataAcces
     {
         public List<Movie> searchMovies()
         {
-
             return DbContext.Movies.ToList();
-
         }
         //get method
         public Movie GetMovie(Guid movieId)
         {
-
             var movie = DbContext.Movies.FirstOrDefault(a => a.Id == movieId);
             return movie;
-
         }
 
         //post method add category

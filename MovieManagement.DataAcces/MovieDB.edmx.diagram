@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9badf194816346b5a80d1087815e9b22" Name="Diagram1">
-        <EntityTypeShape EntityType="MoviesDBModel.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoviesDBModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="MoviesDBModel.Movie" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="MoviesDBModel.Review" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <AssociationConnector Association="MoviesDBModel.FK_Movie_Categories" ManuallyRouted="false" />
