@@ -52,7 +52,7 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="~/Theme/js/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
+    Morris Charts JavaScript
     <script src="~/Theme/js/raphael.min.js"></script>
     <script src="~/Theme/js/morris.min.js"></script>
     <script src="~/Theme/js/morris-data.js"></script>
@@ -60,6 +60,8 @@
     <!-- Custom Theme JavaScript -->
     <script src="~/Theme/js/sb-admin-2.min.js"></script>
 
+    @RenderSection("scripts", required: false)
+
 </body>
-@RenderSection("scripts", required: false)
+
 </html>

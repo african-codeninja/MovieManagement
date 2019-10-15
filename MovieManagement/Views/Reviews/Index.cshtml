@@ -1,20 +1,15 @@
 ﻿<div class="table-responsive">
     <hr />
-    <a class="btn btn-sm btn-info" href="@Url.Action("Create","Movies")">Add movie</a>
+    <a class="btn btn-sm btn-info" href="@Url.Action("Create","Reviews")">Add review score</a>
     <hr />
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Rating</th>
                 <th>Score</th>
-                <th>Release Date</th>
                 <th></th>
             </tr>
         </thead>
-        <tbody id="movies-tbody">
-        </tbody>
+        <tbody id="reviews-tbody"></tbody>
     </table>
 </div>
 <!-- /.table-responsive -->
@@ -22,13 +17,16 @@
 @section scripts{
     <script type="text/javascript">
         $.ajax({
-            url: 'https://localhost:44390/api/movies/search',
+            url: 'https://localhost:44390/api/reviews/search',
             method: 'GET',
             success: function (result)
             {
-                for (var i = 0; i < result.length; i++) {
-                    var newRow = "<tr><td><a href='/Movies/Details?id=" + result[i].Id + "'>" + result[i].Title + "</a></td><td>" + result[i].CategoryName + "</td><td>" + result[i].Rating + "</td><td>" + result[i].AverageScore + "</td><td>" + result[i].ReleaseDate + "</td><td><button class='btn btn-default delete' data-id='" + result[i].Id + "'>Delete</button></td></tr>";
-                    $("#movies-tbody").append(newRow);
+                result.sort(function (a, b) { return a.Score - b.Score });
+
+                for (var i = 0; i < result.length; i++)
+                {
+                    var newRow = "<tr><td><a href='/Reviews/Details?id=" + result[i].Id + "'>" + result[i].Score + "</a></td><td><button class='btn btn-default delete' data-id='" + result[i].Id + "'>Delete</button></td></tr>";
+                    $("#reviews-tbody").append(newRow);
                 }
 
                 $('.delete').click(function ()
@@ -39,7 +37,7 @@
                     var tr = $(this).parent().parent();
 
                     $.ajax({
-                        url: 'http://localhost:44390/api/movies/' + id,
+                        url: 'https://localhost:44390/api/reviews/' + id,
                         method: 'DELETE',
                         success: function ()
                         {

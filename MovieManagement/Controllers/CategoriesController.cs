@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MovieManagement.Controllers
+namespace MovieManagement.Web.Controllers
 {
     public class CategoriesController : Controller
     {
-        // GET: Categories
+        // GET: Movies
         public ActionResult Index()
         {
             return View();
@@ -17,6 +17,11 @@ namespace MovieManagement.Controllers
         public ActionResult Details(Guid id)
         {
             return View(id);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
         }
     }
 }
